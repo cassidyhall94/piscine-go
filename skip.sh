@@ -1,1 +1,1 @@
-find . | sed -z "s/\0/ /g"
+ls -l | sed '1~2d'
