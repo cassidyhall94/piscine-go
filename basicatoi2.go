@@ -2,6 +2,7 @@ package piscine
 
 func BasicAtoi2(s string) int {
 	result := 0
+	var num rune := []rune(s)
 	for _, num := range s {
 		conv := int(num) - 48
 
