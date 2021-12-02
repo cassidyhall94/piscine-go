@@ -10,14 +10,15 @@ func BasicAtoi2(s string) int {
 			for i := '0'; i < num; i++ {
 				b++
 			}
-			result = (result * 10) + b
+			result = result*10 + b
 			b = 0
 		} else {
 			check = false
 		}
-		if check {
-			return result
-		} else {
-			return 0
-		}
 	}
+	if check {
+		return result
+	} else {
+		return 0
+	}
+}
