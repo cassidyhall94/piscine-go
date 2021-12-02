@@ -5,7 +5,7 @@ import (
 )
 
 func main() {
-	var alphabet string = "zyxwvutsrqponmlkjihgfedcba"
+	var alphabet string = "abcdefghijklmnopqrstuvwxyz"
 	for i := 0; i <= 25; i++ {
 		z01.PrintRune(rune(alphabet[i]))
 	}
