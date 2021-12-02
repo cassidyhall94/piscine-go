@@ -1,10 +1,10 @@
 package piscine
 
 func BasicAtoi(s string) int {
-	var result []int
-
-	for i := 0; i < len(runes); i++ {
-		result = append(result, int(runes[i]))
-	}
-	return result
+	result := 0
+for _, s := 0, range s {
+	conv := int(num) - 48
+	result = (result * 10) + conv
+}
+return result
 }
