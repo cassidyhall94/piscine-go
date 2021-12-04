@@ -11,22 +11,21 @@ func Atoi(s string) int {
 				continue
 			} else if sb == 45 {
 				minusy = true
+				continue
 			}
 		}
-		for _, r := range runerange {
-			if r == sb {
-				b := 0
-				for i := 0; i < int(sb-'0'); i++ {
-					b++
-				}
-				result = result*10 + b
-			} else {
-				return 0
+		if sb < 58 && sb > 47 {
+			b := 0
+			for i := 0; i < int(sb-'0'); i++ {
+				b++
 			}
+			result = result*10 + b
+		} else {
+			return 0
 		}
 	}
 	if minusy {
-		result *= 1
+		result = result * -1
 	}
 	return result
 }
