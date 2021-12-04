@@ -1,8 +1,6 @@
 package piscine
 
-var (
-	runerange = []rune{48, 49, 50, 51, 52, 53, 54, 55, 56, 57}
-)
+var runerange = []rune{48, 49, 50, 51, 52, 53, 54, 55, 56, 57}
 
 func Atoi(s string) int {
 	result := 0
@@ -25,7 +23,6 @@ func Atoi(s string) int {
 			} else {
 				return 0
 			}
-
 		}
 	}
 	if minusy {
