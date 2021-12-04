@@ -16,7 +16,7 @@ func Atoi(s string) int {
 		for _, r := range runerange {
 			if r == sb {
 				b := 0
-				for i := 0; i < int(sb); i++ {
+				for i := 0; i < int(sb-'0'); i++ {
 					b++
 				}
 				result = result*10 + b
