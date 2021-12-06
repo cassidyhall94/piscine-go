@@ -1,11 +1,7 @@
 package piscine
 
-import "fmt"
+import "github.com/01-edu/z01"
 
-func FirstRune(s string) rune {
-	result := []rune(s)[0]
-	for letter := range s {
-		fmt.Printf("%c", letter)
-	}
-	return result
+func FirstRune(s string) {
+	z01.PrintRune([]rune(s)[0])
 }
