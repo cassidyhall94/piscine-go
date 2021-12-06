@@ -5,7 +5,7 @@ func IterativeFactorial(nb int) int {
 	if nb == 0 {
 		return 1
 	} else if nb < 0 || nb > 24 {
-		return 0
+		return 1
 	}
 	for i := nb; i > nb-1; i-- {
 		result = i * (i - 1) * (i - 2)
