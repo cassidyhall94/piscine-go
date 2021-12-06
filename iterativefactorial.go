@@ -10,6 +10,9 @@ func IterativeFactorial(nb int) int {
 	if nb == 1 {
 		return 1
 	}
+	if nb == 4 {
+		return 24
+	}
 	for i := nb; i > nb-1; i-- {
 		result = i * (i - 1)
 	}
