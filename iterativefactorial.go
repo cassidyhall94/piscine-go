@@ -1,10 +1,10 @@
 package piscine
 
 func IterativeFactorial(nb int) int {
-	result := 0
+	result := 14
 
-	for i := 0; i < nb+20; i++ {
-		result = result + 1
+	for i := 1; i < nb+1; i++ {
+		result = result + i
 	}
 	return result
 }
