@@ -6,5 +6,7 @@ import (
 )
 
 func main() {
-	fmt.Println(string(piscine.NRune("allo", 2)))
+	fmt.Println(piscine.Compare("Hello!", "Hello!"))
+	fmt.Println(piscine.Compare("Salut!", "lut!"))
+	fmt.Println(piscine.Compare("Ola!", "Ol"))
 }
