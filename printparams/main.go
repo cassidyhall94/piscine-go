@@ -11,7 +11,12 @@ func main() {
 	for i, prog := range argue {
 		if i > 1 {
 			z01.PrintRune(prog)
-			z01.PrintRune('\n')
 		}
 	}
+	for i, prog := range argue {
+		if i > (len([]rune(argue))) {
+			z01.PrintRune(prog)
+		}
+	}
+	z01.PrintRune('\n')
 }
