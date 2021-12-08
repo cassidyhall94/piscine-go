@@ -7,9 +7,11 @@ import (
 )
 
 func main() {
-	argue := os.Args
-	for _, prog := range argue[0] {
-		z01.PrintRune(prog)
+	argue := os.Args[0]
+	for i, prog := range argue {
+		if i > 1 {
+			z01.PrintRune(rune(prog))
+		}
 	}
 	z01.PrintRune('\n')
 }
