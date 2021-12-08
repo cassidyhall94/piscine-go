@@ -2,14 +2,22 @@ package piscine
 
 func Capitalize(s string) string {
 	result := []rune(s)
-	for i, stringrune := range result {
-		if result[i] >= rune(48) && result[i] >= rune(57) {
+	if s != "" {
+		if result[0] >= 97 && result[0] <= 122 {
+			result[0] -= 32
 		}
-		if result[i] >= rune(65) && result[i] <= rune(90) {
-			result[i] = stringrune + 32
-		} else {
-			if result[i] >= rune(97) && result[i] <= rune(122) {
-				result[i] = stringrune + 32
+	}
+	for i, stringrune := range s {
+		if i != 0 {
+			if IsAlpha(string(result[i-1])) {
+				if stringrune >= 65 && stringrune <= 90 {
+					result[i] += 32
+				}
+			}
+			if !(IsAlpha(string(result[i-1]))) {
+				if stringrune >= 97 && stringrune <= 122 {
+					result[i] -= 32
+				}
 			}
 		}
 	}
