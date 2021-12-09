@@ -7,13 +7,22 @@ import (
 )
 
 func main() {
-	argue := os.Args             // name a var to access the os.args command line
-	for i, prog := range argue { // to loop over the command one by one
-		if i != 0 { // if it does not start at the first index(0)
-			for _, prog := range prog { // to loop over the command again after index (0)
-				z01.PrintRune(prog) // print the command line without the first index (0)
+	// slicerune == num
+	var slicerune []rune
+	for _, arg := range os.Args[1:] { // to loop over the command one by one
+		r := rune(arg[0])
+		slicerune = append(slicerune, r)
+	}
+	sortascii := len(slicerune)
+	for i := 0; i < sortascii; i++ {
+		for j := 0; j < (sortascii - 1 - i); j++ {
+			if slicerune[j] > slicerune[j+1] {
+				slicerune[j], slicerune[j+1] = slicerune[j+1], slicerune[j]
 			}
-			z01.PrintRune('\n')
 		}
+	}
+	for i := range slicerune {
+		z01.PrintRune(rune(slicerune[i]))
+		z01.PrintRune('\n')
 	}
 }
