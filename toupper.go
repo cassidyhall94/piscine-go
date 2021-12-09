@@ -1,5 +1,7 @@
 package piscine
 
+// Write a function that capitalizes each letter in a string.
+
 func ToUpper(s string) string {
 	result := []rune(s)
 	for i := range result {

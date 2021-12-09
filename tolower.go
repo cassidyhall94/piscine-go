@@ -1,5 +1,7 @@
 package piscine
 
+// Write a function that lower cases for each letter in a string.
+
 func ToLower(s string) string {
 	result := []rune(s)
 	for i := range result {

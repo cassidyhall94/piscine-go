@@ -1,5 +1,8 @@
 package piscine
 
+// Write a function that capitalizes the first letter of each word and lowercases the rest.
+// A word is a sequence of alphanumeric characters.
+
 func Capitalize(s string) string {
 	result := []rune(s)
 	if s != "" {

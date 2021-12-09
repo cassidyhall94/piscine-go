@@ -1,5 +1,7 @@
 package piscine
 
+// Write a function that returns true if the string passed as the parameter only contains alphanumerical characters or is empty, otherwise, and returns false.
+
 func IsAlpha(s string) bool {
 	counter := 0
 	for _, stringrune := range s {
