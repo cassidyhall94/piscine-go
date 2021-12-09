@@ -7,18 +7,13 @@ import (
 )
 
 func main() {
-	argue := os.Args[1]
-	for i, prog := range argue {
-		for i, prog := range prog {
-			for i := 0; i < argue; i++ {
-				if prog[i] > prog[i+i] {
-					prog[i], prog[i+1] = prog[i+1], prog[i]
-				}
+	argue := os.Args             // name a var to access the os.args command line
+	for i, prog := range argue { // to loop over the command one by one
+		if i != 0 { // if it does not start at the first index(0)
+			for _, prog := range prog { // to loop over the command again after index (0)
+				z01.PrintRune(prog) // print the command line without the first index (0)
 			}
-		}
-		for i := range argue {
-			z01.PrintRune(rune(prog[i]) + "0")
 			z01.PrintRune('\n')
 		}
-	}s
+	}
 }

@@ -6,6 +6,8 @@ import (
 	"github.com/01-edu/z01"
 )
 
+// Write a program that prints the arguments received in the command line in reverse order.
+
 func main() {
 	argue := os.Args
 	for i := (len(argue) - 1); i > 0; i-- {
