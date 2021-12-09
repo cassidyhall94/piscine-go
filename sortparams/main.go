@@ -7,24 +7,16 @@ import (
 )
 
 func main() {
-	// slicerune == num
-	var slicerune [][]rune
-	for _, arg := range os.Args[1:] { // to loop over the command one by one
-		rs := []rune{}
-		for _, argrune := range arg {
-			rs = append(rs, argrune)
-		}
-		slicerune = append(slicerune, rs)
-	}
-	sortascii := len(slicerune)
+	args := os.Args[1:]
+	sortascii := len(args)
 	for i := 0; i < sortascii; i++ {
 		for j := 0; j < (sortascii - 1 - i); j++ {
-			if slicerune[j][0] > slicerune[j+1][0] {
-				slicerune[j], slicerune[j+1] = slicerune[j+1], slicerune[j]
+			if args[j] > args[j+1] {
+				args[j], args[j+1] = args[j+1], args[j]
 			}
 		}
 	}
-	for _, sr := range slicerune {
+	for _, sr := range args {
 		for _, j := range sr {
 			z01.PrintRune(j)
 		}
