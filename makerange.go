@@ -5,9 +5,9 @@ func MakeRange(min, max int) []int {
 		var array []int
 		return array
 	} else {
-		var result []int = make([]int, min, max)
-		for i := min; i < max; i++ {
-			result[i] = i
+		result := make([]int, max-min)
+		for i := 0; i < max-min; i++ {
+			result[i] = i + min
 		}
 		return result
 	}
