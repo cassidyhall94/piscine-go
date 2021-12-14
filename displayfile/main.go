@@ -17,5 +17,5 @@ func main() {
 	if err != nil {
 		fmt.Printf("File name missing\n")
 	}
-	fmt.Print(file)
+	fmt.Print(string(file))
 }
