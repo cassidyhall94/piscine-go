@@ -13,12 +13,9 @@ func main() {
 		fmt.Printf("File name missing\n")
 		return
 	}
-	file, err := os.Open(os.Args[1])
+	file, err := os.ReadFile(os.Args[1])
 	if err != nil {
 		fmt.Printf("File name missing\n")
 	}
-	arr := make([]byte, 20)
-	file.Read(arr)
-	fmt.Print(string(arr))
-	file.Close()
+	fmt.Print(file)
 }
