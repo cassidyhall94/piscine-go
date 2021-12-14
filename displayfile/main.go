@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	file, err := os.Open("quest8.txt")
+	file, err := os.Open("")
 	if err != nil {
 		fmt.Printf("File name missing\n")
 	} else {
