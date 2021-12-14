@@ -9,7 +9,7 @@ func main() {
 	fname := "File name missing"
 	file, err := os.Open(fname)
 	if err != nil {
-		fmt.Println("\n", err.Error())
+		fmt.Printf("\n")
 	} else {
 		arr := make([]byte, 6)
 		file.Read(arr)
