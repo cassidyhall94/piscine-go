@@ -9,15 +9,15 @@ import (
 func printStr(s string) {
 	arg := os.Args
 	for _, s := range arg {
-		for _, r := range s {
-			z01.PrintRune(r)
+		for _, s := range s {
+			z01.PrintRune(s)
 		}
 	}
 	z01.PrintRune('\n')
 }
 
-func isEven(nbr int) boolean {
-	if even(nbr) == 1 {
+func isEven(nbr int) bool {
+	if nbr%2 == 1 {
 		return true
 	} else {
 		return false
@@ -28,7 +28,7 @@ func main() {
 	lengthOfArg := 0
 	EvenMsg := "I have an even number of arguments"
 	OddMsg := "I have an odd number of arguments"
-	if isEven(lengthOfArg) == 1 {
+	if isEven(lengthOfArg) {
 		printStr(EvenMsg)
 	} else {
 		printStr(OddMsg)
