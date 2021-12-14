@@ -6,17 +6,13 @@ import (
 )
 
 func main() {
-	filearg := os.Args
-	for _, a := range filearg {
-		file, err := os.Open(a)
-		if err != nil {
-			fmt.Printf("the mistake is : %v\n", err.Error())
-		} else {
-			fmt.Println(file.Stat())
-			arr := make([]byte, 6)
-			file.Read(arr)
-			fmt.Println(string(arr))
-			file.Close()
-		}
+	fname := "File name missing"
+	file, err := os.Open(fname)
+	if err != nil {
+		fmt.Println("\n", err.Error())
+	} else {
+		arr := make([]byte, 6)
+		file.Read(arr)
+		file.Close()
 	}
 }
