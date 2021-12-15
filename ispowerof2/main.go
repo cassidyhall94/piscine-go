@@ -8,6 +8,9 @@ import (
 )
 
 func main() {
+	if len(os.Args) > 2 {
+		return
+	}
 	n, err := strconv.Atoi(os.Args[1])
 	if err != nil {
 		for _, r := range "false\n" {
