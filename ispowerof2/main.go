@@ -27,7 +27,7 @@ func main() {
 }
 
 func isPower(n int) int {
-	return n & (n-1)
+	return n & (n - 1)
 }
 
 func print(s string) {
