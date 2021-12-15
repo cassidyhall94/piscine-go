@@ -1,13 +1,14 @@
 package piscine
 
 func Rot14(s string) string {
-	result := []rune(s)
-	for _, result := range s {
-		if result >= (65) && result <= (77) || result >= (97) && result <= (109) {
-			return (string(result + 14))
-		}
-		if result >= (110) && result <= (122) || result >= (78) && result <= (90) {
-			return (string(result - 12))
+	result := []rune{}
+	for _, srune := range s {
+		if srune >= (65) && srune <= (77) || srune >= (97) && srune <= (109) {
+			result = append(result, srune+14)
+		} else if srune >= (110) && srune <= (122) || srune >= (78) && srune <= (90) {
+			result = append(result, srune-12)
+		} else {
+			result = append(result, srune)
 		}
 	}
 	return string(result)
