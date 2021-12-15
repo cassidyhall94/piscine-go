@@ -6,6 +6,6 @@ import (
 )
 
 func main() {
-	steps := piscine.CollatzCountdown(12)
+	steps := piscine.CollatzCountdown(16)
 	fmt.Println(steps)
 }
