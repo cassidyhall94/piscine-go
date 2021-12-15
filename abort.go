@@ -1,7 +1,6 @@
 package piscine
 
 func Abort(a, b, c, d, e int) int {
-
 	median := []int{a, b, c, d, e}
 	sortinterger := len(median)
 	for i := 0; i < sortinterger; i++ {
