@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-	result := piscine.Rot14("Hello! How are You?")
+	result := piscine.Rot14("MXzO23NF Yxd7")
 
 	for _, r := range result {
 		z01.PrintRune(r)
