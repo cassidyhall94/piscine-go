@@ -10,28 +10,30 @@ import (
 func main() {
 	n, err := strconv.Atoi(os.Args[1])
 	if err != nil {
-		print("false\n")
+		for _, r := range "false\n" {
+			z01.PrintRune(r)
+		}
 		return
 	}
 
 	if n == 0 {
-		print("false\n")
+		for _, r := range "false\n" {
+			z01.PrintRune(r)
+		}
 		return
 	}
 
 	if isPower(n) == 0 {
-		print("true\n")
+		for _, r := range "true\n" {
+			z01.PrintRune(r)
+		}
 	} else {
-		print("false\n")
+		for _, r := range "false\n" {
+			z01.PrintRune(r)
+		}
 	}
 }
 
 func isPower(n int) int {
 	return n & (n - 1)
-}
-
-func print(s string) {
-	for _, r := range s {
-		z01.PrintRune(r)
-	}
 }
