@@ -1,25 +1,26 @@
 package piscine
 
-var runes = []rune{48, 49, 50, 51, 52, 53, 54, 55, 56, 57}
-
 func Itoa(n int) string {
-	var result string
-	for i, sb := range result {
-		if i == 0 {
-			if sb == 43 {
-				continue
-			} else if sb == 45 {
-				continue
-			}
+	var buf []byte
+	var r []byte
+	var next int
+	var right int
+
+	for {
+		if n < 0 {
+			n = -1 * n
+			r = append(r, '-')
 		}
-		if sb < 58 && sb > 47 {
-			b := 0
-			for i := 0; i < int(sb-'0'); i++ {
-				b++
-			}
-		} else {
-			return result
+		next = n / 10
+		right = n - next*10
+		n = next
+		buf = append(buf, byte('0'+right))
+		if n == 0 {
+			break
 		}
 	}
-	return result
+	for j := 0; j < len(buf); j++ {
+		r = append(r, buf[len(buf)-j-1])
+	}
+	return string(r)
 }
