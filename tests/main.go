@@ -6,5 +6,7 @@ import (
 )
 
 func main() {
-	fmt.Println(piscine.ActiveBits(7))
+	a := []int{23, 123, 1, 11, 55, 93}
+	max := piscine.Max(a)
+	fmt.Println(max)
 }
