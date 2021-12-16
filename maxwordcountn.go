@@ -1,6 +1,9 @@
 package piscine
 
+import "sort"
+
 func MaxWordCountN(text string, n int) map[string]int {
-	mymap := map[string]int{"Orange": 6, "of": 7, "the": 8}
+	mymap := map[string]int{}
+	sort.Strings(n)
 	return mymap
 }
