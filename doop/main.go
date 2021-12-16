@@ -47,7 +47,7 @@ func Maths(s []string) string {
 		output = changetoString(result)
 	case "%":
 		if nb2 == 0 || nb1 == 0 {
-			return "No Modulo by 0\n"
+			return "No modulo by 0\n"
 		}
 		result = nb1 % nb2
 		output = changetoString(result)
