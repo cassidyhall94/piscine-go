@@ -32,37 +32,31 @@ func Maths(s []string) string {
 		}
 		result = nb1 + nb2
 		output = changetoString(result)
-		os.Stdout.WriteString("nb1 + nb2")
 	case "-":
 		if nb1 == 9223372036854775807 || nb2 == 9223372036854775807 {
 			return ""
 		}
 		result = nb1 - nb2
 		output = changetoString(result)
-		os.Stdout.WriteString("nb1 - nb2")
+
 	case "/":
 		if nb2 == 0 || nb1 == 0 {
-			result = nb1 / nb2
-			output = changetoString(result)
-			os.Stdout.WriteString("No division by 0")
-		} else {
-			os.Stdout.WriteString("nb1 / nb2")
+			return "No division by 0\n"
 		}
+		result = nb1 / nb2
+		output = changetoString(result)
 	case "%":
 		if nb2 == 0 || nb1 == 0 {
-			result = nb1 % nb2
-			output = changetoString(result)
-			os.Stdout.WriteString("No Modulo by 0")
-		} else {
-			os.Stdout.WriteString("nb1 % nb2")
+			return "No Modulo by 0\n"
 		}
+		result = nb1 % nb2
+		output = changetoString(result)
 	case "*":
 		if nb1 == 9223372036854775807 || nb2 == 9223372036854775807 {
 			return ""
 		}
 		result = nb1 * nb2
 		output = changetoString(result)
-		os.Stdout.WriteString("nb1 * nb2")
 	}
 	return output
 }
