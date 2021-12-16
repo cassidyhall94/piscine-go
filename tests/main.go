@@ -6,7 +6,6 @@ import (
 )
 
 func main() {
-	a := []int{1, 2, 3, 1, 2, 3, 4}
-	unmatch := piscine.Unmatch(a)
-	fmt.Println(unmatch)
+	toConcat := []string{"Hello!", " How", " are", " you?"}
+	fmt.Println(piscine.Join(toConcat, ":"))
 }
